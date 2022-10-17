@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Lessons"
+include ':p_005_layoutfiles'
+include ':p_006_layouts'
+include ':p_007_layoutprop'
+include ':p_008_viewbuild'
+include ':p_009_onclickbutton'
+include ':p_010_0_listener'
+include ':p_010_1_activitylistener'
+include ':p_011_1_resvalues'
+include ':p_010_2_listener'
+include ':p_012_1_logandmess'
+include ':p_013_1_menusimple'
+include ':p_014_1_menuadv'
+include ':p_015_1_contextmenu'
+include ':p_016_1_dynamiclayout'
+include ':p_017_1_dynamiclayout2'
+include ':p_018_1_dynamiclayout3'
+include ':p_019_1_simplecalculator'
+include ':p_020_1_simpleanimation2'
+include ':p_021_1_twoactivity'
+include ':p_023_1_oneactivitystate'
+include ':p_024_1_twoactivitystate'
+include ':p_026_1_intentfilter'
+include ':p_027_1_getintentaction'
+include ':p_028_1_intentextras'
+include ':p_029_1_simpleactivityresult'
+include ':p_030_1_activityresult'

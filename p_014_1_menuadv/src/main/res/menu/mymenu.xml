@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_add"
+        android:title="add"/>
+    <item
+        android:id="@+id/menu_edit"
+        android:title="edit"/>
+    <item
+        android:id="@+id/menu_delete"
+        android:title="delete"/>
+
+    <group
+        android:id="@+id/group_1">
+        <item
+            android:id="@+id/menu_copy"
+            android:title="copy"
+            android:orderInCategory="1"/>
+        <item
+            android:id="@+id/menu_paste"
+            android:title="paste"
+            android:orderInCategory="2"/>
+        <item
+            android:id="@+id/menu_exit"
+            android:title="exit"
+            android:orderInCategory="3"/>
+    </group>
+</menu>

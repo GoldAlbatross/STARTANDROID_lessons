@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">P_027_1_GetIntentAction</string>
+    <string name="show_time">time</string>
+    <string name="show_date">date</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/p_005_layoutfiles" />
+            <option value="$PROJECT_DIR$/p_006_layouts" />
+            <option value="$PROJECT_DIR$/p_007_layoutprop" />
+            <option value="$PROJECT_DIR$/p_008_viewbuild" />
+            <option value="$PROJECT_DIR$/p_009_onclickbutton" />
+            <option value="$PROJECT_DIR$/p_010_0_listener" />
+            <option value="$PROJECT_DIR$/p_010_1_activitylistener" />
+            <option value="$PROJECT_DIR$/p_010_2_listener" />
+            <option value="$PROJECT_DIR$/p_011_1_resvalues" />
+            <option value="$PROJECT_DIR$/p_012_1_logandmess" />
+            <option value="$PROJECT_DIR$/p_013_1_menusimple" />
+            <option value="$PROJECT_DIR$/p_014_1_menuadv" />
+            <option value="$PROJECT_DIR$/p_015_1_contextmenu" />
+            <option value="$PROJECT_DIR$/p_016_1_dynamiclayout" />
+            <option value="$PROJECT_DIR$/p_017_1_dynamiclayout2" />
+            <option value="$PROJECT_DIR$/p_018_1_dynamiclayout3" />
+            <option value="$PROJECT_DIR$/p_019_1_simplecalculator" />
+            <option value="$PROJECT_DIR$/p_020_1_simpleanimation2" />
+            <option value="$PROJECT_DIR$/p_021_1_twoactivity" />
+            <option value="$PROJECT_DIR$/p_023_1_oneactivitystate" />
+            <option value="$PROJECT_DIR$/p_024_1_twoactivitystate" />
+            <option value="$PROJECT_DIR$/p_026_1_intentfilter" />
+            <option value="$PROJECT_DIR$/p_027_1_getintentaction" />
+            <option value="$PROJECT_DIR$/p_028_1_intentextras" />
+            <option value="$PROJECT_DIR$/p_029_1_simpleactivityresult" />
+            <option value="$PROJECT_DIR$/p_030_1_activityresult" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

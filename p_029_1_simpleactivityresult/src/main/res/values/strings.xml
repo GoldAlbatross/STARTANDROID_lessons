@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">P_029_1_SimpleActivityResult</string>
+    <string name="your_name_is">Your name is</string>
+    <string name="input_name">input name</string>
+    <string name="name">Name</string>
+    <string name="ok">ok</string>
+</resources>

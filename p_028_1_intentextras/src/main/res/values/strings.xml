@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">P_028_1_IntentExtras</string>
+    <string name="first_name">First name</string>
+    <string name="input_your_name">Input your name</string>
+    <string name="second_name">last name</string>
+    <string name="submit">submit</string>
+</resources>
