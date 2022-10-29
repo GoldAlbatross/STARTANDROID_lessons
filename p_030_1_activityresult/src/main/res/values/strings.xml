@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">P_030_1_ActivityResult</string>
+    <string name="color">Color</string>
+    <string name="alignment">Alignment</string>
+    <string name="red">Red</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="left">left</string>
+    <string name="center">center</string>
+    <string name="right">right</string>
 </resources>

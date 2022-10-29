@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tv = findViewById(R.id.tvName);
         btn = findViewById(R.id.btn);
-
         btn.setOnClickListener(this);
     }
 
@@ -32,7 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(data == null) {return;}
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data == null) {
+            return;
+        }
         String name = data.getStringExtra("name");
         tv.setText(tv.getText().toString() + name);
     }
