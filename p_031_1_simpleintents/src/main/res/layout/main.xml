@@ -3,12 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:padding="30dp"
+    android:orientation="vertical">
     <Button
         android:id="@+id/btnWeb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="70dp"
         android:layout_weight="1"
         android:text="@string/web">
     </Button>
@@ -16,7 +17,7 @@
         android:id="@+id/btnMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="70dp"
         android:layout_weight="1"
         android:text="@string/map">
     </Button>
@@ -24,7 +25,7 @@
         android:id="@+id/btnCall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="70dp"
         android:layout_weight="1"
         android:text="@string/call">
     </Button>

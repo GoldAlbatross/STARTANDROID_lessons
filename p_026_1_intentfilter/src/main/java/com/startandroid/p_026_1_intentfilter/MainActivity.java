@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        Intent flip;
+        Intent intent;
         switch (v.getId()) {
             case R.id.btnT:
-                flip = new Intent("com.startandroid.intent.action.showtime");
-                startActivity(flip);
+                intent = new Intent("com.startandroid.intent.action.showtime");
+                startActivity(intent);
                 break;
             case R.id.btnD:
-                flip = new Intent("com.startandroid.intent.action.showdate");
-                startActivity(flip);
+                intent = new Intent("com.startandroid.intent.action.showdate");
+                startActivity(intent);
                 break;
         }
 

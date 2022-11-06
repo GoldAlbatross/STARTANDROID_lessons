@@ -10,13 +10,15 @@
         android:theme="@style/Theme.Lessons">
 
         <activity
-            android:name=".ActivityTime" android:exported="false">
+            android:name=".ActivityTime"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.startandroid.intent.action.showtime" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".ActivityDate"
             android:label="Date small"
@@ -26,6 +28,8 @@
                 <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".ActivityDate2"
             android:label="Date big"
