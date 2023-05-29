@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class ActivityDate2 extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class ActivityDate2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d, yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d, yyyy", Locale.US);
         String date = sdf.format(new Date(System.currentTimeMillis()));
 
         TextView tvDate = findViewById(R.id.tv);

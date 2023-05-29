@@ -35,7 +35,7 @@
             android:label="Date big"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.startandroid.intent.action.showtime"></action>
+                <action android:name="com.startandroid.intent.action.date"></action>
                 <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
         </activity>

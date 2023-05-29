@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">k_093_service</string>
+    <string name="startservice">StartService</string>
+</resources>

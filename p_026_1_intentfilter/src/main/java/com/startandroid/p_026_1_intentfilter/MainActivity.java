@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btnD:
-                intent = new Intent("com.startandroid.intent.action.showdate");
+                intent = new Intent("com.startandroid.intent.action.date");
                 startActivity(intent);
                 break;
         }
