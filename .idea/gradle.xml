@@ -15,6 +15,9 @@
             <option value="$PROJECT_DIR$/k_093_service_stop" />
             <option value="$PROJECT_DIR$/k_094_service_kill_client" />
             <option value="$PROJECT_DIR$/k_094_service_kill_client_2" />
+            <option value="$PROJECT_DIR$/k_095_service_pendingintent" />
+            <option value="$PROJECT_DIR$/k_096_service_broadcast" />
+            <option value="$PROJECT_DIR$/k_097_service_bind_client" />
             <option value="$PROJECT_DIR$/p_005_layoutfiles" />
             <option value="$PROJECT_DIR$/p_006_layouts" />
             <option value="$PROJECT_DIR$/p_007_layoutprop" />
