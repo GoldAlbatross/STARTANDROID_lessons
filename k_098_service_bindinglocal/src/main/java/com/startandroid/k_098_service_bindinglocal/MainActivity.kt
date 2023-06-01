@@ -1,4 +1,4 @@
-package com.startandroid.k_097_service_bind_client
+package com.startandroid.k_098_service_bindinglocal
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

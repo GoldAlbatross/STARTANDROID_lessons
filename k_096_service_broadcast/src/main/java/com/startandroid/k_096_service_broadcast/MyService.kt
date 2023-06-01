@@ -39,29 +39,30 @@ class MyService: Service() {
     }
 
     inner class RunTasks(var startId: Int, var time: Int, var task: Int) : Runnable {
-
         override fun run() {
-            val intent = Intent(MainActivity.BROADCAST_ACTION)
             Log.d(LOG, "Task#$startId start")
             try {
                 // сообщаем о старте задачи
-                intent.putExtra(MainActivity.TASK_KEY, task)
-                intent.putExtra(MainActivity.STATUS_KEY, MainActivity.START)
-                sendBroadcast(intent)
+                Intent(MainActivity.BROADCAST_ACTION).apply {
+                    putExtra(MainActivity.TASK_KEY, task)
+                    putExtra(MainActivity.STATUS_KEY, MainActivity.START)
+                    sendBroadcast(this)
+                }
 
                 // начинаем выполнение задачи
                 TimeUnit.SECONDS.sleep(time.toLong())
 
                 // сообщаем об окончании задачи
-                intent.putExtra(MainActivity.STATUS_KEY, MainActivity.FINISH)
-                intent.putExtra(MainActivity.RESULT_KEY, "выполнено за $time секунд")
-                sendBroadcast(intent)
+                Intent(MainActivity.BROADCAST_ACTION).apply {
+                    putExtra(MainActivity.STATUS_KEY, MainActivity.FINISH)
+                    putExtra(MainActivity.RESULT_KEY, "выполнено за $time секунд")
+                    sendBroadcast(this)
+                }
             } catch (e: InterruptedException) {
                 e.printStackTrace()
             }
             stop()
         }
-
         private fun stop() {
             Log.d(LOG, "Task#$startId end, stopSelfResult($startId) = ${stopSelfResult(startId)}")
         }
