@@ -13,7 +13,7 @@ class MyService: Service() {
 
     private var binder = MyBinder()
     private lateinit var timer: Timer
-    private lateinit var timerTask: TimerTask
+    private var timerTask: TimerTask? = null
     private var interval: Long = 1000
 
     override fun onCreate() {
@@ -29,7 +29,7 @@ class MyService: Service() {
     }
 
     private fun schedule() {
-        timerTask.cancel()
+        timerTask?.cancel()
         if (interval > 0) {
             timerTask = object : TimerTask() {
                 override fun run() { Log.d(LOG, "run") }

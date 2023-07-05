@@ -23,12 +23,16 @@ class MainActivity : AppCompatActivity() {
   private lateinit var service: MyService
   var interval: Long = 0
 
-  /** Called when the activity is first created.  */
+  override fun onStart() {
+    super.onStart()
+    bindService(intent, serviceConnection, 0)
+  }
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(binding.root)
 
     intent = Intent(this, MyService::class.java)
+
     serviceConnection = object : ServiceConnection {
       override fun onServiceConnected(name: ComponentName?, binder: IBinder) {
         Log.d(LOG, "MainActivity onServiceConnected")
@@ -41,12 +45,6 @@ class MainActivity : AppCompatActivity() {
       }
     }
     setListeners()
-  }
-
-
-  override fun onStart() {
-    super.onStart()
-    bindService(intent, serviceConnection, 0)
   }
 
   override fun onStop() {
