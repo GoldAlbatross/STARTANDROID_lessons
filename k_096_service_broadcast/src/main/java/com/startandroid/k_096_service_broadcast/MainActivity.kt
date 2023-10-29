@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private val binding by lazy (LazyThreadSafetyMode.NONE){
         ActivityMainBinding.inflate(layoutInflater) }
-    lateinit var receiver: BroadcastReceiver
+    private lateinit var receiver: BroadcastReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +25,14 @@ class MainActivity : AppCompatActivity() {
         binding.task3.text = getString(R.string.task)
 
         // создаем BroadcastReceiver
-        val receiver = object : BroadcastReceiver() {
-
-            // действия при получении сообщений
+        receiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent) {
 
                 val task: Int = intent.getIntExtra(TASK_KEY, 0)
                 val status: String = intent.getStringExtra(STATUS_KEY) ?: "error"
                 Log.d(LOG, "onReceive: task = $task, status = $status")
 
-                // Ловим сообщения о старте задач
-                if (status == START) {
+                if (status == START) { // Ловим сообщения о старте задач
                     when (task) {
                         TASK1 -> binding.task1.text = "Task1 start"
                         TASK2 -> binding.task2.text = "Task2 start"
@@ -43,8 +40,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                // Ловим сообщения об окончании задач
-                if (status == FINISH) {
+                if (status == FINISH) { // Ловим сообщения об окончании задач
                     val result: String = intent.getStringExtra(RESULT_KEY) ?: "error"
                     when (task) {
                         TASK1 -> binding.task1.text = "Task1 finish, result = $result"
@@ -55,19 +51,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // создаем фильтр для BroadcastReceiver
         val intFilter = IntentFilter(BROADCAST_ACTION)
-
-        // регистрируем (включаем) BroadcastReceiver
         registerReceiver(receiver, intFilter)
 
         binding.btnStart.setOnClickListener { onClickStart() }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-
-        // дерегистрируем (выключаем) BroadcastReceiver
+    override fun onStop() {
+        super.onStop()
         unregisterReceiver(receiver)
     }
 

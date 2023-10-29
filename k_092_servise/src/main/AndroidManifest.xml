@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".com.startandroid.k_093_service.MyService"
+            android:name=".MyService"
             android:enabled="true"
             />
     </application>

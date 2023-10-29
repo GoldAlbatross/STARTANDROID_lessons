@@ -52,7 +52,6 @@ class MyService: Service() {
     }
 
     inner class MyBinder : Binder() {
-        val service: MyService
-            get() = this@MyService
+        val service: MyService = this@MyService
     }
 }

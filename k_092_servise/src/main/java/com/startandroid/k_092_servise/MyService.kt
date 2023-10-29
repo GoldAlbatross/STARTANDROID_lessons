@@ -34,7 +34,7 @@ class MyService: Service() {
     private fun someTask() {
         Log.d("qqq", "onStartCommand: сервис выполняет работу")
         Thread {
-            for (i in 1..9) {
+            for (i in 1..29) {
                 Log.d("qqq", "i = $i")
                 try {
                     TimeUnit.SECONDS.sleep(1)

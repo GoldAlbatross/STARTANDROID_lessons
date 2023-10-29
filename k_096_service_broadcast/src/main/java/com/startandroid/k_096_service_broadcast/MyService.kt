@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit
 
 class MyService: Service() {
 
-
     private lateinit var es: ExecutorService
 
     override fun onCreate() {

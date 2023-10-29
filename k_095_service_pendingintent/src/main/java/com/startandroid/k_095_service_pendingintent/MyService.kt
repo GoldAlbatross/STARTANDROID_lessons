@@ -18,7 +18,7 @@ class MyService : Service() {
     override fun onCreate() {
         super.onCreate()
         Log.d(qqq, "MyService onCreate")
-        es = Executors.newFixedThreadPool(1)
+        es = Executors.newSingleThreadExecutor()
     }
 
     override fun onDestroy() {
@@ -27,7 +27,6 @@ class MyService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        Log.d(qqq, "MyService onStartCommand: id=$startId")
         val time = intent?.getIntExtra(MainActivity.TIME, 1)!!
         val pi: PendingIntent = intent.getParcelableExtra(MainActivity.P_INTENT)!!
         val mr = MyRun(time, startId, pi)
@@ -44,15 +43,19 @@ class MyService : Service() {
         override fun run() {
             Log.d("qqq", "MyRun#$startId start, time = $time")
             try {
-                // сообщаем о старте задачи
                 pi.send(MainActivity.STATUS_START)
-
-                // начинаем выполнение задачи
                 TimeUnit.SECONDS.sleep(time.toLong())
-
-                // сообщаем об окончании задачи
                 val intent = Intent().putExtra(MainActivity.PARAM_RESULT, time * 100)
                 pi.send(this@MyService, MainActivity.STATUS_FINISH, intent)
+
+                // Для создания пендинг интента из сервиса
+//                val resultIntent = Intent(this@MyService, MainActivity::class.java).apply {
+//                    putExtra(MainActivity.PARAM_RESULT, time * 100)
+//                }
+//                val pendingIntent = PendingIntent.getActivity(
+//                    this@MyService, 0, resultIntent, PendingIntent.FLAG_IMMUTABLE
+//                )
+//                pendingIntent.send()
 
             } catch (e: InterruptedException) {
                 e.printStackTrace()

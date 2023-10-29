@@ -18,7 +18,7 @@ class MyService : Service() {
     override fun onCreate() {
         super.onCreate()
         Log.d(qqq, "MyService onCreate")
-        es = Executors.newFixedThreadPool(3)
+        es = Executors.newFixedThreadPool(2)
         someRes = Object()
     }
 
@@ -33,7 +33,7 @@ class MyService : Service() {
         val time = intent?.getIntExtra("time", 1) ?: 1
         val mr = MyRun(time, startId)
         es.execute(mr)
-        return super.onStartCommand(intent, flags, startId)
+        return START_STICKY
     }
 
     override fun onBind(arg0: Intent?): IBinder? {
